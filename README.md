@@ -16,7 +16,7 @@ For compiling our game we need to :
 - Controls : WASD + Esc
 
 ## Ressources
-GitBook : Checking list for creating map
-Minilibx documentation : understand which functions to use.
-Youtube : Seeing some projects to visualize.
-AI : Memory leaks and add some parsing.
+- GitBook : Checking list for creating map
+- Minilibx documentation : understand which functions to use.
+- Youtube : Seeing some projects to visualize.
+- AI : Memory leaks and add some parsing.
