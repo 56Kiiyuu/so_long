@@ -38,9 +38,9 @@ void	launch_game(char *file)
 	init_mlx(&so_long, so_long.map);
 	load_assets(&so_long);
 	render_map(&so_long, so_long.map);
-	mlx_hook(so_long.display.win, 2, (1L << 0), check_keypress, &so_long);
-	mlx_hook(so_long.display.win, 17, (1L << 17), quit_game, &so_long);
-	mlx_loop_hook(so_long.display.mlx, render_move, &so_long);
+	mlx_hook(so_long.display.win, 2, (1L << 0), (int (*)(void))((void *)check_keypress), &so_long);
+	mlx_hook(so_long.display.win, 17, (1L << 17), (int (*)(void))((void *)quit_game), &so_long);
+	mlx_loop_hook(so_long.display.mlx, (int (*)(void))((void *)render_move), &so_long);
 	mlx_loop(so_long.display.mlx);
 }
 

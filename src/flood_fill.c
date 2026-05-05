@@ -27,7 +27,7 @@ t_point	pop(t_stack *s)
 
 static int	ff_process_tile(t_ff *ff, t_point p)
 {
-	if (p.x < 0 || p.y < 0 || p.x >= ff->map->cols || p.y >= ff->map->rows)
+	if (p.x >= ff->map->cols || p.y >= ff->map->rows)
 		return (0);
 	if (ff->path[p.y][p.x] == WALL)
 		return (0);
